@@ -65,5 +65,5 @@ test("Element's attributes", function() {
     content: {}
   };
 
-  equal(jsonToHtml(json), '<div class="test-class", id="test-id"></div>', "Elements get the attributes specified in the JSON.");
+  equal(jsonToHtml(json), '<div class="test-class" id="test-id"></div>', "Elements get the attributes specified in the JSON.");
 });

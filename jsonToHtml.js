@@ -7,7 +7,7 @@ function jsonToHtml(json) {
       values.push(att + "=\"" + attributes[att] + "\"");
 
     if (values.length)
-      tag += " " + values.join(", ");
+      tag += " " + values.join(" ");
 
     tag += ">";
     return tag;

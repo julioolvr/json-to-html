@@ -25,7 +25,7 @@ Examples:
           content: {}
         };
         
-        jsonToHtml(json); // <div class="test-class", id="test-id"></div>
+        jsonToHtml(json); // <div class="test-class" id="test-id"></div>
 
 * Nested divs
 
