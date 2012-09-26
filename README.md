@@ -16,25 +16,25 @@ Examples:
 
 * A div with some attributes:
 
-    var json = {
-      type: "div",
-      attributes: {
-        "class": "test-class",
-        "id": "test-id"
-      },
-      content: {}
-    };
-
-    jsonToHtml(json); // <div class="test-class", id="test-id"></div>
+        var json = {
+          type: "div",
+          attributes: {
+            "class": "test-class",
+            "id": "test-id"
+          },
+          content: {}
+        };
+        
+        jsonToHtml(json); // <div class="test-class", id="test-id"></div>
 
 * Nested divs
 
-    var json = {
-      type: "div",
-      content: {
-        type: "div",
-        content: {}
-      }
-    };
-
-    jsonToHtml(json); // <div><div></div></div>
+        var json = {
+          type: "div",
+          content: {
+            type: "div",
+            content: {}
+          }
+        };
+        
+        jsonToHtml(json); // <div><div></div></div>
