@@ -9,8 +9,8 @@ How-to
 
 HTML nodes/tags are represented by objects. Siblings can be put together on an array. Each object has the following properties:
 * `type`: which tag will it be. The only one that gets special treatment is `text`, that gets it's content returned without more processing.
-* `content`: the tag's content, again tags of type `text` won't get its content processed. I'd like to make this optional in the future.
-* `attributes`: an object with key/value pairs that will be the tag's attributes.
+* `content`: (optional) the tag's content, again tags of type `text` won't get its content processed.
+* `attributes`: (optional) an object with key/value pairs that will be the tag's attributes.
 
 Examples:
 
@@ -21,8 +21,7 @@ Examples:
           attributes: {
             "class": "test-class",
             "id": "test-id"
-          },
-          content: {}
+          }
         };
         
         jsonToHtml(json); // <div class="test-class" id="test-id"></div>
@@ -32,8 +31,7 @@ Examples:
         var json = {
           type: "div",
           content: {
-            type: "div",
-            content: {}
+            type: "div"
           }
         };
         
