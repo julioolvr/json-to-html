@@ -19,15 +19,13 @@ function jsonToHtml(json) {
   var result = "";
 
   if (json instanceof Array) {
-    result = "";
-
     for (var i = 0; i < json.length; i++)
       result += jsonToHtml(json[i]);
 
     return result;
   }
 
-  if (!json.content)
+  if (!json.type)
     return "";
 
   if (json.type === "text") {
@@ -36,7 +34,7 @@ function jsonToHtml(json) {
     var startTag = buildStartTag(json.type, json.attributes);
     var endTag = "</" + json.type + ">";
 
-    result += startTag + jsonToHtml(json.content) + endTag;
+    result += startTag + (json.content ? jsonToHtml(json.content) : "") + endTag;
   }
 
   return result;

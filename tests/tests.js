@@ -21,8 +21,7 @@ test("Single text element", function() {
 
 test("Single non-text element", function() {
   var json = {
-    type: "div",
-    content: {}
+    type: "div"
   };
 
   equal(jsonToHtml(json), "<div></div>", "An object with only a non-text node returns the open and close tag for that element.");
@@ -31,12 +30,10 @@ test("Single non-text element", function() {
 test("Sibling non-text elements", function() {
   var json = [
     {
-      type: "div",
-      content: {}
+      type: "div"
     },
     {
-      type: "div",
-      content: {}
+      type: "div"
     }
   ];
 
@@ -47,8 +44,7 @@ test("Nested elements", function() {
   var json = {
     type: "div",
     content: {
-      type: "div",
-      content: {}
+      type: "div"
     }
   };
 
@@ -61,8 +57,7 @@ test("Element's attributes", function() {
     attributes: {
       "class": "test-class",
       "id": "test-id"
-    },
-    content: {}
+    }
   };
 
   equal(jsonToHtml(json), '<div class="test-class" id="test-id"></div>', "Elements get the attributes specified in the JSON.");
